@@ -7,12 +7,10 @@ st.set_page_config(
     layout="centered"
 )
 
-# Header
 st.title("Misty Hill School Story Visualizer")
 st.subheader("PlanCover AI Internship Submission by Yashswi Shukla")
 st.markdown("---")
 
-# Poster 1
 st.header("1️⃣ Pema's Dawn Walk")
 st.image("ChatGPT Image Jun 15, 2025, 01_18_36 AM.png", use_container_width=True)
 st.markdown("""
@@ -24,7 +22,6 @@ st.markdown("""
 """)
 st.markdown("---")
 
-# Poster 2
 st.header("2️⃣ Turning Toward School with Kunu")
 st.image("ChatGPT Image Jun 15, 2025, 01_14_00 AM.png", use_container_width=True)
 st.markdown("""
@@ -36,7 +33,6 @@ st.markdown("""
 """)
 st.markdown("---")
 
-# Poster 3
 st.header("3️⃣ Kunu Points - Group's Shared Awe")
 st.image("ChatGPT Image Jun 15, 2025, 01_14_14 AM.png", use_container_width=True)
 st.markdown("""
@@ -48,7 +44,6 @@ st.markdown("""
 """)
 st.markdown("---")
 
-# Poster 4
 st.header("4️⃣ Final Dash to the Gate")
 st.image("ChatGPT Image Jun 15, 2025, 02_18_44 AM.png", use_container_width=True)
 st.markdown("""
