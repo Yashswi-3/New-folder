@@ -3,125 +3,109 @@ from PIL import Image
 
 # Configure page
 st.set_page_config(
-    page_title="Story Visualizer - Yashswi Shukla",
-    layout="centered"
+    page_title='Story Visualizer - Yashswi Shukla',
+    layout='centered'
 )
 
-st.title("Misty Hill School Story Visualizer")
+# Title and Introduction
+st.title("✨ Misty Hill School Story Visualizer")
 st.subheader("AI Internship by Yashswi Shukla")
-st.markdown("---")
-st.header("1️⃣ Pema's Dawn Walk")
-st.image("ChatGPT Image Jun 15, 2025, 01_18_36 AM.png", use_container_width=True)
 
+st.sidebar.title("About the Characters")
+st.sidebar.write("""
+- **Pema** — a thoughtful red panda
+- **Temba** — a black Himalayan bear with a mischievous side
+- **Kima** — a grey langur, energetic and impulsive
+- **Pihu** — a Himalayan bulbul, musical and graceful
+- **Kunu** — a nimble goral, quietly wise
+""")
 
+st.sidebar.success("Select a scene to view from the pagination controls below!")
 
-st.markdown("""
-1️⃣ Pema’s Dawn Walk
-Brief Description:
+# Story scenes
+scenes = [
+    {
+        "header": "1️⃣ Pema's Dawn Walk",
+        "image": "ChatGPT Image Jun 15, 2025, 01_18_36 AM.png",
+        "text": """
+**Brief Description:**  
 A solitary moment of quiet anticipation as Pema the red panda makes her pre‑dawn trek to school, savoring the stillness and magic of the misty hills.
 
-Story Excerpt:
+**Story Excerpt:**  
+> “Pema, a red panda with soft russet fur and thoughtful eyes, liked to walk to school before the village was fully awake. The hills were quiet then, and the clouds hung low like sleepy scarves across the trees. She took the winding path slowly, her paws making soft prints in the morning dew.”
 
-“Pema, a red panda with soft russet fur and thoughtful eyes, liked to walk to school before the village was fully awake. The hills were quiet then, and the clouds hung low like sleepy scarves across the trees. She took the winding path slowly, her paws making soft prints in the morning dew.”
+**Sensory Details:**  
+- Tactile: Pema’s paws make soft prints in the morning dew.  
+- Visual: Low mist, clouds hang low.  
+- Auditory: The hills are silent.  
 
-Sensory Details:
-
-Tactile: Pema’s paws make soft prints in the morning dew.
-
-Visual: Low mist curls around the trees; clouds hang low “like sleepy scarves.”
-
-Auditory: The hills are silent—an almost palpable stillness. \n
 **Why this scene?**  
-- Establishes Pema as the protagonist  
-- Creates atmosphere with mist and dawn light  
-- Shows solitude before friendships form  
-- Visualizes key sensory detail: paw prints in dew
-""")
-st.markdown("---")
+- Establishes Pema as the protagonist
+- Sets atmospheric context
+- Highlights solitude before friendships form
+        """
+    },
+    {
+        "header": "2️⃣ Turning Toward School with Kunu",
+        "image": "ChatGPT Image Jun 15, 2025, 01_14_00 AM.png",
+        "text": """
+**Brief Description:**  
+At Pema’s gentle reminder, the friends pivot toward the school’s hidden roof—a moment of shared purpose before Kunu’s arrival.
 
-st.header("2️⃣ Turning Toward School with Kunu")
-st.image("ChatGPT Image Jun 15, 2025, 01_14_00 AM.png", use_container_width=True)
-st.markdown("""
-2️⃣ Turning Toward School with Kunu
-Brief Description:
-At Pema’s gentle reminder, the four friends pivot together toward the school’s hidden roof—an instant of shared purpose before Kunu arrives to complete their circle.
+**Story Excerpt:**  
+> “‘Not now,’ Pema said gently. ‘We’ll be late.’  
+> The four of them turned toward the last bend in the trail, where the school roof peeked out from behind the pines.  
+> And there, as always, came Kunu.”
 
-Story Excerpt:
+**Sensory Details:**  
+- Visual: The school roof peeks from pines
+- Kinesthetic: A gentle breeze with the flags
+- Emotional: Anticipation and togetherness
+        """
+    },
+    {
+        "header": "3️⃣ Kunu Points - Group's Shared Awe",
+        "image": "ChatGPT Image Jun 15, 2025, 01_14_14 AM.png",
+        "text": """
+**Brief Description:**  
+Kunu guides his friends toward a moment of awe as the clouds lift and the first rays illuminate the peak.
 
-“‘Not now,’ Pema said gently. ‘We’ll be late.’
-The four of them turned toward the last bend in the trail, where the school roof peeked out from behind the pines.
-And there, as always, came Kunu.”
+**Story Excerpt:**  
+> “He didn’t speak right away. Kunu was a young goral—a nimble creature with grey fur and steady steps. He nodded toward the clouds.  
+> A ray of sunlight fell upon the snow-capped peak.  
+> ‘Clear day,’ Kunu said softly.  
+> They stood together, enraptured by nature’s magic.”
 
-Sensory Details:
+**Sensory Details:**  
+- Auditory: A woodpecker taps, a birdsong resonates
+- Olfactory: The air smells of pine and slate
+- Visual: The clouds lifting, the sunlight touching the peak
+        """
+    },
+    {
+        "header": "4️⃣ Final Dash to the Gate",
+        "image": "ChatGPT Image Jun 15, 2025, 02_18_44 AM.png",
+        "text": """
+**Brief Description:**  
+The friends break into a sprint toward the school gate, their youthful energy fueling their forward rush.
 
-Visual: The school roof “peeks out from behind the pines” and prayer flags flutter overhead.
+**Story Excerpt:**  
+> “Then—ding ding ding!—the school bell rang, faint but bright.  
+> ‘Last one to the gate is a sleepy snail!’ Kima shouted, already halfway there.  
+> Pema walked behind the others, smiling to herself.  
+> She liked the first day of school. It always felt a little bit like the first page of a book.”
 
-Kinesthetic: A gentle breeze is implied by the fluttering prayer flags.\n
-**Why this scene?**  
-- First group moment showing friendships  
-- Prayer flags add cultural authenticity  
-- School reveal creates narrative anticipation  
-- Kunu's arrival completes the circle
-""")
-st.markdown("---")
+**Sensory Details:**  
+- Auditory: The school bell ringing
+- Visual/Emotional: The children’s happiness and renewal
+        """
+    },
+    {
+        "header": "Full Story",
+        "image": None,
+        "text": """
+**First Bell at Misty Hill School**  
 
-st.header("3️⃣ Kunu Points - Group's Shared Awe")
-st.image("ChatGPT Image Jun 15, 2025, 01_14_14 AM.png", use_container_width=True)
-st.markdown("""
-3️⃣ Kunu Points — Group’s Shared Awe
-Brief Description:
-Kunu rises as the silent guide, pointing toward the lifting clouds and sunlit peak, and the friends stand together, enraptured by nature’s awakening.
-
-Story Excerpt:
-
-“He didn’t speak right away. Kunu was a young goral—a nimble mountain goat with soft grey fur and steady steps. He simply nodded at the others, then pointed toward the mountain ridge.
-A line of sunlight had just touched the snowcap above. The clouds were lifting.
-‘Clear day,’ Kunu said softly. ‘You can see the whole peak.’
-They stood for a moment, all five, watching the morning open up before them. The forest shimmered with birdsong. The air smelled of pine and slate.”
-
-Sensory Details:
-
-Auditory: A woodpecker taps on a pine; a goat bleats; the forest “shimmers with birdsong.”
-
-Olfactory: The air “smells of pine and slate.”
-
-Visual: Clouds lifting off the snowcap; sunlight touching the peak; mist receding.\n 
-**Why this scene?**  
-- Emotional climax of the story  
-- Nature becomes the sixth character  
-- Silhouettes focus on mountain reveal  
-- Shows transition from mist to sunlight
-""")
-st.markdown("---")
-
-st.header("4️⃣ Final Dash to the Gate")
-st.image("ChatGPT Image Jun 15, 2025, 02_18_44 AM.png", use_container_width=True)
-st.markdown("""
-4️⃣ Final Dash to the Gate
-Brief Description:
-The school bell rings and the friends burst into a joyful sprint toward the gate—playful competition and hopeful excitement propelling them into a new day.
-
-Story Excerpt:
-
-“Then—ding ding ding!—the school bell rang, faint but bright.
-‘Last one to the gate is a sleepy snail!’ Kima shouted, already halfway there.
-Pema walked behind the others, smiling to herself. New notebooks, clean chalkboards, stories waiting to begin. She liked the first day of school. It always felt a little bit like the first page of a book.”
-
-Sensory Details:
-
-Auditory: The school bell rings—“ding ding ding”—faint but bright.
-
-Visual/Emotional: New notebooks and clean chalkboards stand ready inside, evoking crisp beginnings.\n
-**Why this scene?**  
-- Perfect narrative conclusion  
-- Shows character personalities through movement  
-- Bell visualization represents new beginnings  
-- Contrasts with opening's solitude
-""")
-st.markdown("---")
-
-st.markdown("""
-**First Bell at Misty Hill School** \n
 Pema, a red panda with soft russet fur and thoughtful eyes, liked to walk to school before the village was fully awake. The hills were quiet then, and the clouds hung low like sleepy scarves across the trees. She took the winding path slowly, her paws making soft prints in the morning dew.
 At the bend near the prayer flag tree, someone was waiting. Temba, a woolly Himalayan black bear, waved with both paws. “I thought I’d be the first today,” he grinned, a little out of breath. His ears twitched in the breeze.
 “You’re early,” Pema said with a smile. “Did you take the steep trail again?”
@@ -145,8 +129,23 @@ They stood for a moment, all five, watching the morning open up before them. The
 Then—ding ding ding!—the school bell rang, faint but bright.
 “Last one to the gate is a sleepy snail!” Kima shouted, already halfway there.
 Pema walked behind the others, smiling to herself. New notebooks, clean chalkboards, stories waiting to begin. She liked the first day of school. It always felt a little bit like the first page of a book.
-""")
+
+        """
+    },
+]
+
+# Pagination
+page = st.number_input("Select scene number", min_value=1, max_value=len(scenes), value=1)
+
+current_scene = scenes[page - 1]
+
+st.header(current_scene['header'])
+
+if current_scene['image']:
+    st.image(current_scene['image'], use_container_width=True)
+
+st.markdown(current_scene['text'])
 
 # Footer
-st.markdown("---")
+st.markdown('---')
 st.caption("Created with Streamlit for AI Internship | Images generated with ChatGPT")
