@@ -119,4 +119,4 @@ Visual/Emotional: New notebooks and clean chalkboards stand ready inside, evokin
 
 # Footer
 st.markdown("---")
-st.caption("Created with Streamlit for PlanCover AI Internship | Images generated with Midjourney AI")
+st.caption("Created with Streamlit for PlanCover AI Internship | Images generated with ChatGPT")
