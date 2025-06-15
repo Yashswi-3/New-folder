@@ -8,7 +8,7 @@ st.set_page_config(
 )
 
 st.title("Misty Hill School Story Visualizer")
-st.subheader("PlanCover AI Internship Submission by Yashswi Shukla")
+st.subheader("AI Internship Project by Yashswi Shukla")
 st.markdown("---")
 
 st.header("1️⃣ Pema's Dawn Walk")
@@ -119,4 +119,4 @@ Visual/Emotional: New notebooks and clean chalkboards stand ready inside, evokin
 
 # Footer
 st.markdown("---")
-st.caption("Created with Streamlit for PlanCover AI Internship | Images generated with ChatGPT")
+st.caption("Created with Streamlit for AI Internship | Images generated with ChatGPT")
